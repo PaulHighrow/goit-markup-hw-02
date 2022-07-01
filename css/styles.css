@@ -5,7 +5,7 @@
   --secondary-color: #212121;
   --triary-color: #ffffff;
   --bg-color: #2f303a;
-  --team-bg-color: #f5f4fa;
+  --secondary-bg-color: #f5f4fa;
   --logo-color: #000000;
   --accent-color: #2196f3;
   --secondary-accent-color: #188ce8;
@@ -141,7 +141,7 @@ body {
 /* =============== Команда =============== */
 /* Фон секции */
 .team {
-  background-color: var(--team-bg-color);
+  background-color: var(--secondary-bg-color);
 }
 
 /* Имена сотрудников */
@@ -156,6 +156,11 @@ body {
 .team-job {
   font-size: 16px;
   line-height: 1.19;
+}
+
+/* Центрирование имен и должностей сотрудников  */
+.team-name,
+.team-job {
   text-align: center;
 }
 
@@ -175,9 +180,9 @@ body {
   font-style: normal;
 }
 
-/* Стили элемента address */
-.contacts-footer > .link {
-  color: var(--main-color);
+/* Стили элемента address, уникальный цвет с макета */
+.contacts-footer .link {
+  color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   line-height: 1.71;
 }
@@ -198,12 +203,20 @@ body {
 
 /* Стили кнопок фильтра */
 .btn {
+  color: var(--secondary-color);
+  background-color: var(--secondary-bg-color);
   font-family: inherit;
   font-weight: 500;
   cursor: pointer;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: inherit;
+}
+
+/* Эффект кнопки, выбранной по умолчанию */
+.btn.current {
+  color: var(--triary-color);
+  background-color: var(--accent-color);
 }
 
 /* Эффекты кнопок фильтра */
